@@ -1,10 +1,18 @@
-function hasTargetSum(array, target) {
+function hasTargetSum(arr, target) {
   // Write your algorithm here
+  let newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        newArr.push([arr[i], arr[j]])
+      }
+    }
+  }
+  return newArr.length > 0? true : false;
 }
 
-/* 
-  Write the Big O time complexity of your function here
-*/
+  // Write the Big O time complexity of your function here
+
 
 /* 
   Add your pseudocode here
